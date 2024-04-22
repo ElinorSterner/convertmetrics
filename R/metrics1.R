@@ -1,48 +1,52 @@
-#' @name weight
-#' @title Weight Conversion
+#' @name convertmetrics
+#' @title Metrics Conversion
 #' @description
-#' This function converts weight between different units
+#' This function converts metrics between different units
 #' @param num A number or a vector for converting.
-#' @param starting_unit The starting unit of our number.
+#' @param starting_unit The starting_unit unit of our number.
 #' @param final_unit The unit we want to convert to.
-#' @return A sentence describing the conversion.
+#' @return The converted number or vector.
 #' @examples
+#' distance(6, "yards", "meters")
 #' weight(c(1,2), "g", "tael")
 #' weight(3, "lbs", "kilos")
+#' volume(c(10, 20, 30), "gal", "lit")
+#' temp(28, "c", "f")
 #'
 #' @export
-distance <- function(num, starting, final){
-  starting <- tolower(starting)
-  final <- tolower(final)
-  if (starting == "miles" && final == "kilometers") {
+distance <- function(num, starting_unit, final_unit){
+  starting_unit <- tolower(starting_unit)
+  final_unit <- tolower(final_unit)
+  if (starting_unit == "miles" && final_unit == "kilometers") {
     converted <- 1.609344 * num
     return(converted)
   }
-  if (starting == "kilometers" && final == "miles") {
+  if (starting_unit == "kilometers" && final_unit == "miles") {
     converted <- 0.6214 * num
     return(converted)
   }
-  if (starting == "meters" && final == "yards") {
+  if (starting_unit == "meters" && final_unit == "yards") {
     converted <- 1.09361 * num
     return(converted)
   }
-  if (starting == "yards" && final == "meters") {
+  if (starting_unit == "yards" && final_unit == "meters") {
     converted <- 0.9144 * num
     return(converted)
   }
-  if (starting == "inchs" && final == "centimeters") {
+  if (starting_unit == "inchs" && final_unit == "centimeters") {
     converted <- 2.54 * num
     return(converted)
   }
-  if (starting == "centimeters" && final == "inchs") {
+  if (starting_unit == "centimeters" && final_unit == "inchs") {
     converted <- 0.393701 * num
     return(converted)
   }
-  stop("Check your starting and final parameters, at least one of them doesn't match the possibilities for this function")
+  stop("Check your starting and final_unit parameters, at least one of them doesn't match the possibilities for this function")
 }
 
 #####################
-
+#' @rdname convertmetrics
+#' @export
 weight <- function(num, starting_unit, final_unit) {
   if (starting_unit == "lbs") {
     kilos = num * 0.454
@@ -85,8 +89,10 @@ weight <- function(num, starting_unit, final_unit) {
 }
 
 #####################
-
 # Volume conversion function
+#' @rdname convertmetrics
+#' @export
+
 volume <-
   function(num = NULL,
            starting_unit = "gal",
@@ -117,8 +123,10 @@ volume <-
     return(result)
   }
 
-
 # Temperature conversion function
+#' @rdname convertmetrics
+#' @export
+
 temp <-
   function(num = NULL,
            starting_unit = "c",
@@ -145,14 +153,3 @@ temp <-
 
     return(result)
   }
-
-# Test volume conversion
-volume(num = 10,
-       starting_unit = "gal",
-       final_unit = "lit")  # Expected output: 37.8541
-volume(
-  num = c(10, 20, 30),
-  starting_unit = "gal",
-  final_unit = "lit"
-)  # Expected output: c(37.8541, 75.7082, 113.5624)
-
