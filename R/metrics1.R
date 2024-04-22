@@ -39,6 +39,7 @@ distance <- function(num, starting, final){
     return(converted)
   }
   stop("Check your starting and final parameters, at least one of them doesn't match the possibilities for this function")
+}
 #####################
 weight <- function(num, starting_unit, final_unit) {
   if (starting_unit == "lbs") {
