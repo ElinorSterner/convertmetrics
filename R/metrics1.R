@@ -113,9 +113,9 @@ volume <-
 
     # Perform conversion
     if (starting_unit == "gal" && final_unit == "lit") {
-      result <- num * conversion_factors[2] / conversion_factors[1]
+      result <- num * conversion_factors[1]
     } else if (starting_unit == "lit" && final_unit == "gal") {
-      result <- num * conversion_factors[1] / conversion_factors[2]
+      result <- num * conversion_factors[1]
     } else {
       stop("Conversion not supported.")
     }
