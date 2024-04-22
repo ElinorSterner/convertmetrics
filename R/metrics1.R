@@ -1,30 +1,29 @@
-distance <- function(x, starting, final){
+distance <- function(num, starting, final){
   starting <- tolower(starting)
   final <- tolower(final)
   if (starting == "miles" && final == "kilometers") {
-    converted <- 1.609344 * x
+    converted <- 1.609344 * num
     return(converted)
   }
   if (starting == "kilometers" && final == "miles") {
-    converted <- 0.6214 * x
+    converted <- 0.6214 * num
     return(converted)
   }
   if (starting == "meters" && final == "yards") {
-    converted <- 1.09361 * x
+    converted <- 1.09361 * num
     return(converted)
   }
   if (starting == "yards" && final == "meters") {
-    converted <- 0.9144 * x
+    converted <- 0.9144 * num
     return(converted)
   }
-  if (starting == "inch" && final == "centimeter") {
-    converted <- 2.54 * x
+  if (starting == "inchs" && final == "centimeters") {
+    converted <- 2.54 * num
     return(converted)
   }
-  if (starting == "centimeter" && final == "inch") {
-    converted <- 0.393701 * x
+  if (starting == "centimeters" && final == "inchs") {
+    converted <- 0.393701 * num
     return(converted)
   }
   stop("Check your starting and final parameters, at least one of them doesn't match the possibilities for this function")
 }
-
