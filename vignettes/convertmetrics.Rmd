@@ -32,3 +32,6 @@ Suppose that we also want to convert `c(3, NA) grams` to `taels`, so we will set
 weight(num = 8, starting_unit = "g", final_unit = "tael")
 ```
 
+## Conversion Data
+
+The `convertmetrics` package also comes with a built-in data set describing 60  conversion.
