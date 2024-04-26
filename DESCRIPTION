@@ -1,11 +1,7 @@
-Package: metricsgroup2
 Package: convertmetrics
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("Molly", "Friedman", , "mtfriedman@smith.edu", role = c("aut", "cre")
-    person("Heng", "Song", , "hsong@smith.edu", role = c("aut", "cre")
-    person("Elinor", "Sterner", , "esterner@smith.edu", role = c("aut", "cre")
     person("Molly", "Friedman", , "mtfriedman@smith.edu", role = c("aut", "cre"))
     person("Heng", "Song", , "hsong@smith.edu", role = c("aut", "cre"))
     person("Elinor", "Sterner", , "esterner@smith.edu", role = c("aut", "cre"))
