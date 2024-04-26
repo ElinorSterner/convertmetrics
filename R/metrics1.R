@@ -19,7 +19,7 @@ weight <- function(num, starting_unit, final_unit) {
   # remove NA values
   if (anyNA(num)) {
     warning("Remove NA values")
-    num <- na.omit(num)
+    num <- num[!is.na(num)]
   }
   # lbs & kilogram
   if (starting_unit == "lbs" && final_unit == "kilograms") {
