@@ -34,4 +34,4 @@ weight(num = 8, starting_unit = "g", final_unit = "tael")
 
 ## Conversion Data
 
-The `convertmetrics` package also comes with a built-in data set describing 60  conversion.
+The `convertmetrics` package also comes with a built-in data set describing 60  conversions. Some of the data points are repetitive, with the purpose of showing that this package can work with a large data frame.
