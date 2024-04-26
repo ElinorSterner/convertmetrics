@@ -21,7 +21,7 @@ weight <- function(num, starting_unit, final_unit) {
     warning("Remove NA values")
     num <- na.omit(num)
   }
-  # lbs & kilograms
+  # lbs & kilogram
   if (starting_unit == "lbs" && final_unit == "kilograms") {
     kilograms = num * 0.454
     # for (i in seq_along(num)) {
