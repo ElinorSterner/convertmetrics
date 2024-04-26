@@ -127,8 +127,11 @@ volume <- function(num, starting_unit, final_unit) {
   if (starting_unit == "lit" && final_unit == "gal") {
     converted <- num / 3.78541
     return(converted)
+  } else {
+    stop("Sorry, our package don't support this volume unit right now.")
   }
 }
+
 
 #####################
 temp <- function(num, starting_unit, final_unit) {
@@ -146,8 +149,9 @@ temp <- function(num, starting_unit, final_unit) {
   } else if (starting_unit == "f" && final_unit == "c") {
     result <- (num - 32) * (5/9)
   } else {
-    stop("Conversion not supported.")
+    stop("Sorry, our package don't support this temperature unit right now.")
   }
+}
 
 #####################
 
