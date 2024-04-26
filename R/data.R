@@ -1,0 +1,21 @@
+#' @title Metadata for the columns of converted metrics, data from a group of hypothetical rivers.
+#'
+#' @format
+#' \describe{
+#'   \item{distance_km}{length of the river in kilometers}
+#'   \item{distance_miles}{length of the river in miles}
+#'   \item{distance_yards}{length of the river in yards}
+#'   \item{distance_meters}{length of the river in meters}
+#'   \item{distance_inches}{length of the river in inches}
+#'   \item{distance_centimeters}{length of the river in centimeters}
+#'   \item{sediment_kg}{Volume of sediment in the river in kilograms}
+#'   \item{sediment_lbs}{Volume of sediment in the river in pounds}
+#'   \item{sediment_catty}{Volume of sediment in the river in catties}
+#'   \item{sediment_g}{Volume of sediment in the river in grams}
+#'   \item{sediment_tael}{Volume of sediment in the river in tael}
+#'   \item{water_liters}{Volume of water flowing in the river in liters}
+#'   \item{water_gallons}{Volume of sediment in the river in gallons}
+#'   \item{water_cubic_meters}{Volume of sediment in the river in cubic meters}
+#' }
+#' @source <https://xkcd.com/json.html>
+"convert_data"
