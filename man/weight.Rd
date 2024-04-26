@@ -2,9 +2,10 @@
 % Please edit documentation in R/metrics1.R
 \name{weight}
 \alias{weight}
+\alias{distance}
 \title{Weight Conversion}
 \usage{
-weight(num, starting_unit, final_unit)
+distance(num, starting, final)
 }
 \arguments{
 \item{num}{A number or a vector for converting.}
