@@ -1,4 +1,6 @@
 ^metricsgroup2\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^doc$
+^Meta$
 ^data-raw$
