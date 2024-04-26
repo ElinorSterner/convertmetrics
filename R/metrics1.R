@@ -33,7 +33,7 @@ distance <- function(num, starting_unit, final_unit){
     converted <- 0.9144 * num
     return(converted)
   }
-  if (starting_unit == "inchs" && final_unit == "centimeters") {
+  if (starting_unit == "inches" && final_unit == "centimeters") {
     converted <- 2.54 * num
     return(converted)
   }
