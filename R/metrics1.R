@@ -9,7 +9,7 @@
 #' @examples
 #' distance(6, "yards", "meters")
 #' weight(c(1,2), "g", "tael")
-#' weight(3, "lbs", "kilos")
+#' weight(3, "lbs", "kilograms")
 #' volume(c(10, 20, 30), "gal", "lit")
 #' temp(28, "c", "f")
 #'
@@ -48,41 +48,59 @@ distance <- function(num, starting_unit, final_unit){
 #' @rdname convertmetrics
 #' @export
 weight <- function(num, starting_unit, final_unit) {
-  if (starting_unit == "lbs") {
-    kilos = num * 0.454
-    for (i in seq_along(num)) {
-      cat(num[i], "lbs equal to", kilos[i], "kilos\n")
-    }
+  # check if the input is NULL
+  if (is.null(num)) {
+    stop("Input cannot be NULL.")
   }
-  else if (starting_unit == "kilos") {
+  # remove NA values
+  if (anyNA(num)) {
+    warning("Remove NA values")
+    num <- na.omit(num)
+  }
+  # lbs & kilogram
+  if (starting_unit == "lbs" && final_unit == "kilograms") {
+    kilograms = num * 0.454
+    # for (i in seq_along(num)) {
+    #   cat(num[i], "lbs equal to", kilograms[i], "kilograms\n")
+    # }
+    return(kilograms)
+  }
+  else if (starting_unit == "kilograms" && final_unit == "lbs") {
     lbs = num * 2.205
-    for (i in seq_along(num)) {
-      cat(num[i], "kilos equal to", lbs[i], "lbs\n")
-    }
+    # for (i in seq_along(num)) {
+    #   cat(num[i], "kilograms equal to", lbs[i], "lbs\n")
+    # }
+    return(lbs)
   }
-  else if (starting_unit == "catty") {
+  # catty & kg
+  else if (starting_unit == "catty" && final_unit == "kg") {
     kg = num * 2
-    for (i in seq_along(num)) {
-      cat(num[i], "catty equal to", kg[i], "kg\n")
-    }
+    # for (i in seq_along(num)) {
+    #   cat(num[i], "catty equal to", kg[i], "kg\n")
+    # }
+    return(kg)
   }
-  else if (starting_unit == "kg") {
+  else if (starting_unit == "kg" && final_unit == "catty") {
     catty = num / 2
-    for (i in seq_along(num)) {
-      cat(num[i], "kg equal to", catty[i], "catty\n")
-    }
+    # for (i in seq_along(num)) {
+    #   cat(num[i], "kg equal to", catty[i], "catty\n")
+    # }
+    return(catty)
   }
-  else if (starting_unit == "tael") {
+  # tael & g
+  else if (starting_unit == "tael" && final_unit == "g") {
     g = num / 50
-    for (i in seq_along(num)) {
-      cat(num[i], "tael equal to", g[i], "g\n")
-    }
+    # for (i in seq_along(num)) {
+    #   cat(num[i], "tael equal to", g[i], "g\n")
+    # }
+    return(g)
   }
-  else if (starting_unit == "g") {
+  else if (starting_unit == "g" && final_unit == "tael") {
     tael = num * 50
-    for (i in seq_along(num)) {
-      cat(num[i], "g equal to", tael[i], "tael\n")
-    }
+    # for (i in seq_along(num)) {
+    #   cat(num[i], "g equal to", tael[i], "tael\n")
+    # }
+    return(tael)
   } else {
     stop("Sorry, our package don't support this weight unit right now.")
   }
