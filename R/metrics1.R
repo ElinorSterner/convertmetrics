@@ -107,67 +107,47 @@ weight <- function(num, starting_unit, final_unit) {
 }
 
 #####################
-# Volume conversion function
-#' @rdname convertmetrics
-#' @export
 
-volume <-
-  function(num = NULL,
-           starting_unit = "gal",
-           final_unit = "lit") {
-    # Check if num is NULL
-    if (is.null(num)) {
-      stop("Input 'num' cannot be NULL.")
-    }
-
-    # Remove NA values
-    if (anyNA(num)) {
-      warning("Remove NA values")
-      num <- na.omit(num)
-    }
-
-    # Conversion factors
-    conversion_factors <- c("gal" = 3.78541, "lit" = 1)
-
-    # Perform conversion
-    if (starting_unit == "gal" && final_unit == "lit") {
-      result <- num * conversion_factors[1]
-    } else if (starting_unit == "lit" && final_unit == "gal") {
-      result <- num * conversion_factors[1]
-    } else {
-      stop("Conversion not supported.")
-    }
-
-    return(result)
+volume <- function(num, starting_unit, final_unit) {
+  if (is.null(num)) {
+    stop("Input cannot be NULL.")
   }
 
-# Temperature conversion function
-#' @rdname convertmetrics
-#' @export
-
-temp <-
-  function(num = NULL,
-           starting_unit = "c",
-           final_unit = "f") {
-    # Check if num is NA
-    if (is.null(num)) {
-      stop("Input cannot be NULL.")
-    }
-
-    # Remove NA values
-    if (anyNA(num)) {
-      warning("Remove NA values")
-      num <- na.omit(num)
-    }
-
-    # Conversion formula
-    if (starting_unit == "c" && final_unit == "f") {
-      result <- (num * 9 / 5) + 32
-    } else if (starting_unit == "f" && final_unit == "c") {
-      result <- (num - 32) * 5 / 9
-    } else {
-      stop("Conversion not supported.")
-    }
-
-    return(result)
+  # remove NA values
+  if (anyNA(num)) {
+    warning("Remove NA values")
+    num <- num[!is.na(num)]
   }
+
+  if (starting_unit == "gal" && final_unit == "lit") {
+    converted <- num * 3.78541
+    return(converted)
+  }
+
+  if (starting_unit == "lit" && final_unit == "gal") {
+    converted <- num / 3.78541
+    return(converted)
+  }
+}
+
+#####################
+temp <- function(num, starting_unit, final_unit) {
+  if (is.null(num)) {
+    stop("Input cannot be NULL.")
+  }
+  # remove NA values
+  if (anyNA(num)) {
+    warning("Remove NA values")
+    num <- num[!is.na(num)]
+  }
+
+  if (starting_unit == "c" && final_unit == "f") {
+    result <- (num * (9/5)) + 32
+  } else if (starting_unit == "f" && final_unit == "c") {
+    result <- (num - 32) * (5/9)
+  } else {
+    stop("Conversion not supported.")
+  }
+
+#####################
+
