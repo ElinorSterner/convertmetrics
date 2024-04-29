@@ -4,11 +4,17 @@
 \alias{convertmetrics}
 \alias{distance}
 \alias{weight}
+\alias{volume}
+\alias{temp}
 \title{Metrics Conversion}
 \usage{
 distance(num, starting_unit, final_unit)
 
 weight(num, starting_unit, final_unit)
+
+volume(num, starting_unit, final_unit)
+
+temp(num, starting_unit, final_unit)
 }
 \arguments{
 \item{num}{A number or a vector for converting.}
@@ -25,9 +31,9 @@ This function converts metrics between different units
 }
 \examples{
 distance(6, "yards", "meters")
-weight(c(1,2), "g", "tael")
-weight(3, "lbs", "kilograms")
-volume(c(10, 20, 30), "gal", "lit")
-temp(28, "c", "f")
+weight(c(1, 2), "grams", "tael")
+weight(c(3, NA, 8), "pounds", "kilograms")
+volume(c(10, 20, 30), "gallons", "liters")
+temp(28, "celsius", "fahrenheit")
 
 }
