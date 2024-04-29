@@ -4,6 +4,8 @@
 # convertmetrics()
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/ElinorSterner/metrics_group_2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ElinorSterner/metrics_group_2/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -41,7 +43,7 @@ And install the final version of the package from CRAN with:
 
 ``` r
 install.packages("convertmetrics")
-#> Installing package into '/private/var/folders/pj/_h64zn_j63n7jhztw7cmngnm0000gn/T/RtmpThBDhR/temp_libpath13f2c43dbf84f'
+#> Installing package into '/private/var/folders/sf/dh0vgcxd1_v5lyg_4rt532wh0000gp/T/Rtmp0E9N1Q/temp_libpath1680f770e5039'
 #> (as 'lib' is unspecified)
 #> Warning: package 'convertmetrics' is not available for this version of R
 #> 
@@ -57,17 +59,18 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(convertmetrics)
 
-volume(c(4, 7, 22), "gal", "lit")
-#> [1] 15.14164 26.49787 83.27902
+volume(c(4, 7, 22), "gallons", "liters")
+#> [1] 15.14 26.50 83.28
 
-weight(c(78, 34, 99), "g", "tael")
+weight(c(78, 34, 99), "grams", "tael")
 #> [1] 3900 1700 4950
 
-weight(c(78, 34, 99), "lbs", "kilograms")
-#> [1] 35.412 15.436 44.946
+weight(c(78, 34, 99), "pounds", "kilograms")
+#> [1] 35.41 15.44 44.95
 
 distance(c(26.2, 13.1, 89, 7, 3), "miles", "kilometers")
-#> [1]  42.164813  21.082406 143.231616  11.265408   4.828032
+#> [1]  42.16  21.08 143.23  11.27   4.83
 
-temp(c(63, 62, 70, 65, 64), "f", "c")
+temp(c(63, 62, 70, 65, 64), "fahrenheit", "celsius")
+#> [1] 17.22 16.67 21.11 18.33 17.78
 ```

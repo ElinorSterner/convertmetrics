@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/ElinorSterner/metrics_group_2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ElinorSterner/metrics_group_2/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -55,14 +56,14 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(convertmetrics)
 
-volume(c(4, 7, 22), "gal", "lit")
+volume(c(4, 7, 22), "gallons", "liters")
 
-weight(c(78, 34, 99), "g", "tael")
+weight(c(78, 34, 99), "grams", "tael")
 
-weight(c(78, 34, 99), "lbs", "kilograms")
+weight(c(78, 34, 99), "pounds", "kilograms")
 
 distance(c(26.2, 13.1, 89, 7, 3), "miles", "kilometers")
 
-temp(c(63, 62, 70, 65, 64), "f", "c")
+temp(c(63, 62, 70, 65, 64), "fahrenheit", "celsius")
 
 ```
