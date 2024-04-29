@@ -107,7 +107,8 @@ weight <- function(num, starting_unit, final_unit) {
 }
 
 #####################
-
+#' @rdname convertmetrics
+#' @export
 volume <- function(num, starting_unit, final_unit) {
   if (is.null(num)) {
     stop("Input cannot be NULL.")
@@ -134,6 +135,8 @@ volume <- function(num, starting_unit, final_unit) {
 
 
 #####################
+#' @rdname convertmetrics
+#' @export
 temp <- function(num, starting_unit, final_unit) {
   if (is.null(num)) {
     stop("Input cannot be NULL.")
