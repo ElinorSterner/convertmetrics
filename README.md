@@ -1,12 +1,31 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# convertmetrics
+# convertmetrics()
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of convertmetrics is to convert between measurement systems
+## Overview
+
+The goal of convertmetrics is to convert between measurement systems. It
+works will multiple systems of measurement, including the metric system,
+imperial system (i.e. US and UK measurements) and some weights used in
+the Chinese measurement system, catty and tael. For all supported units,
+the package converts treats the metric system as the base unit, and all
+conversions are to or from a metric unit.
+
+Overall, this package supports the following units and pairs of units:
+
+- volumes (liters and gallons)
+
+- distances (miles and kilometers, meters and yards, inches and
+  centimeters)
+
+- temperatures (Fahrenheit and Celsius)
+
+- weights (pounds and kilograms, kilograms and catty, kilograms and
+  tael)
 
 ## Installation
 
@@ -15,38 +34,40 @@ You can install the development version of convertmetrics from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("ElinorSterner/metrics_group_2")
+devtools::install_github("ElinorSterner/convertmetrics")
 ```
 
-## Example
+And install the final version of the package from CRAN with:
+
+``` r
+install.packages("convertmetrics")
+#> Installing package into '/private/var/folders/pj/_h64zn_j63n7jhztw7cmngnm0000gn/T/RtmpThBDhR/temp_libpath13f2c43dbf84f'
+#> (as 'lib' is unspecified)
+#> Warning: package 'convertmetrics' is not available for this version of R
+#> 
+#> A version of this package for your version of R might be available elsewhere,
+#> see the ideas at
+#> https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
+```
+
+## Usage
 
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(convertmetrics)
-## basic example code
+
+volume(c(4, 7, 22), "gal", "lit")
+#> [1] 15.14164 26.49787 83.27902
+
+weight(c(78, 34, 99), "g", "tael")
+#> [1] 3900 1700 4950
+
+weight(c(78, 34, 99), "lbs", "kilograms")
+#> [1] 35.412 15.436 44.946
+
+distance(c(26.2, 13.1, 89, 7, 3), "miles", "kilometers")
+#> [1]  42.164813  21.082406 143.231616  11.265408   4.828032
+
+temp(c(63, 62, 70, 65, 64), "f", "c")
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
