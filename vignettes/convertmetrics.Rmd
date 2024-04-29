@@ -1,0 +1,41 @@
+---
+title: "Using the convertmetrics package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using the convertmetrics package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+## Browsing convertmetrics
+
+The package convertmetrics is designed to convert some metrics from different measurement systems within R. It includes weight, volume, temperature, and distance. The hope is that work, school, personal projects, and more are made easier when working with different measurement systems. 
+
+Let's see how we can accomplish this. First, load the `xkcd` package.
+```{r setup}
+library(convertmetrics)
+```
+
+Then, use the `distance()`, `weight()`, `volume()`, or `temp()` functions to convert a number with a specific unit to the other. We'll look at the conversion between `grams` and `tael` in weight. Assuming that we want to convert `8 gallons` to liters, so we will set the `num` argument equal to 8, `starting_unit` equals to `gal`, and `final_unit` equals to `lit`.
+
+```{r}
+volume(num = 8, starting_unit = "gal", final_unit = "lit")
+```
+Suppose that we also want to convert `c(3, NA, 5) grams` to `taels`, so we will set the `num` argument equal to `c(3, NA, 5)`, `starting_unit` equals to `g`, and `final_unit` equals to `tael`. The function will disregard the NA values.
+```{r}
+weight(num = c(3, NA, 5), starting_unit = "g", final_unit = "tael")
+```
+
+## Conversion Data
+
+The `convertmetrics` package also comes with a built-in data set describing 60  conversions. Some of the data points are repetitive, with the purpose of showing that this package can work with a large data frame.
+```{r}
+convertmetrics::convert_data
+```
+
