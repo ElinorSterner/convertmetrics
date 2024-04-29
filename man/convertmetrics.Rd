@@ -4,17 +4,11 @@
 \alias{convertmetrics}
 \alias{distance}
 \alias{weight}
-\alias{volume}
-\alias{temp}
 \title{Metrics Conversion}
 \usage{
 distance(num, starting_unit, final_unit)
 
 weight(num, starting_unit, final_unit)
-
-volume(num = NULL, starting_unit = "gal", final_unit = "lit")
-
-temp(num = NULL, starting_unit = "c", final_unit = "f")
 }
 \arguments{
 \item{num}{A number or a vector for converting.}

@@ -27,11 +27,15 @@ Then, use the `distance()`, `weight()`, `volume()`, or `temp()` functions to con
 ```{r}
 volume(num = 8, starting_unit = "gal", final_unit = "lit")
 ```
-Suppose that we also want to convert `c(3, NA) grams` to `taels`, so we will set the `num` argument equal to 8, `starting_unit` equals to `g`, and `final_unit` equals to `tael`. The function will disregard the NA values.
+Suppose that we also want to convert `c(3, NA, 5) grams` to `taels`, so we will set the `num` argument equal to `c(3, NA, 5)`, `starting_unit` equals to `g`, and `final_unit` equals to `tael`. The function will disregard the NA values.
 ```{r}
-weight(num = 8, starting_unit = "g", final_unit = "tael")
+weight(num = c(3, NA, 5), starting_unit = "g", final_unit = "tael")
 ```
 
 ## Conversion Data
 
 The `convertmetrics` package also comes with a built-in data set describing 60  conversions. Some of the data points are repetitive, with the purpose of showing that this package can work with a large data frame.
+```{r}
+convertmetrics::convert_data
+```
+
