@@ -1,5 +1,5 @@
 Package: convertmetrics
-Title: What the Package Does (One Line, Title Case)
+Title: Convert between metric and other measurement systems
 Version: 0.0.0.9000
 Authors@R: 
     person("Molly", "Friedman", , "mtfriedman@smith.edu", role = c("aut", "cre"))
