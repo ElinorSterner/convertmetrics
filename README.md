@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/ElinorSterner/metrics_group_2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ElinorSterner/metrics_group_2/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 ## Overview
@@ -43,7 +44,7 @@ And install the final version of the package from CRAN with:
 
 ``` r
 install.packages("convertmetrics")
-#> Installing package into '/private/var/folders/sf/dh0vgcxd1_v5lyg_4rt532wh0000gp/T/Rtmp0E9N1Q/temp_libpath1680f770e5039'
+#> Installing package into '/private/var/folders/pj/_h64zn_j63n7jhztw7cmngnm0000gn/T/RtmpcAFGYQ/temp_libpath163e23ecf35bf'
 #> (as 'lib' is unspecified)
 #> Warning: package 'convertmetrics' is not available for this version of R
 #> 
