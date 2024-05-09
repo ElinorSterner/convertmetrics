@@ -51,7 +51,7 @@ distance <- function(num, starting_unit, final_unit){
     converted <- 0.393701 * num
     return(round(converted, digits = 2))
   }
-  stop("Sorry, our package doesn't support this distance unit right now.")
+  stop("Sorry, our package doesn't support this distance unit right now. Try miles, kilometers, yards, meters, inches, or centimeters")
 }
 
 #####################
@@ -97,7 +97,7 @@ weight <- function(num, starting_unit, final_unit) {
     converted = num * 50
     return(round(converted, digits = 2))
   } else {
-    stop("Sorry, our package doesn't support this weight unit right now.")
+    stop("Sorry, our package doesn't support this weight unit right now.Try pounds, kilograms, catty, grams or tael")
   }
 }
 
@@ -127,7 +127,7 @@ volume <- function(num, starting_unit, final_unit) {
     converted <- num / 3.78541
     return(round(converted, digits = 2))
   } else {
-    stop("Sorry, our package doesn't support this volume unit right now.")
+    stop("Sorry, our package doesn't support this volume unit right now. Try gallons or liters.")
   }
 }
 
@@ -155,7 +155,7 @@ temp <- function(num, starting_unit, final_unit) {
     converted <- (num - 32) * (5/9)
     return(round(converted, digits = 2))
   } else {
-    stop("Sorry, our package doesn't support this temperature unit right now.")
+    stop("Sorry, our package doesn't support this temperature unit right now. Try fahrenheit or celsius")
   }
 }
 
