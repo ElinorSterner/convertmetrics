@@ -30,10 +30,10 @@ The converted number or vector.
 This function converts metrics between different units
 }
 \examples{
-distance(6, "yards", "meters")
-weight(c(1, 2), "grams", "tael")
-weight(c(3, NA, 8), "pounds", "kilograms")
-volume(c(10, 20, 30), "gallons", "liters")
-temp(28, "celsius", "fahrenheit")
+distance(6, "yrd", "m")
+weight(c(1, 2), "g", "tael")
+weight(c(3, NA, 8), "lbs", "kg")
+volume(c(10, 20, 30), "gal", "l")
+temp(28, "c", "f")
 
 }
