@@ -2,6 +2,9 @@
 #' @title Metrics Conversion
 #' @description
 #' This function converts metrics between different units
+#'
+#' @importFrom dplyr glimpse
+#'
 #' @param num A number or a vector for converting.
 #' @param starting_unit The starting_unit unit of our number.
 #' @param final_unit The unit we want to convert to.
