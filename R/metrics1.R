@@ -27,31 +27,31 @@ distance <- function(num, starting_unit, final_unit){
     warning("Remove NA values")
     num <- num[!is.na(num)]
   }
-  if (starting_unit == "miles" && final_unit == "kilometers") {
+  if (starting_unit == "mi" && final_unit == "km") {
     converted <- 1.609344 * num
     return(round(converted, digits = 2))
   }
-  if (starting_unit == "kilometers" && final_unit == "miles") {
+  if (starting_unit == "km" && final_unit == "mi") {
     converted <- 0.6214 * num
     return(round(converted, digits = 2))
   }
-  if (starting_unit == "meters" && final_unit == "yards") {
+  if (starting_unit == "m" && final_unit == "yrd") {
     converted <- 1.09361 * num
     return(round(converted, digits = 2))
   }
-  if (starting_unit == "yards" && final_unit == "meters") {
+  if (starting_unit == "yrd" && final_unit == "m") {
     converted <- 0.9144 * num
     return(round(converted, digits = 2))
   }
-  if (starting_unit == "inches" && final_unit == "centimeters") {
+  if (starting_unit == "in" && final_unit == "cm") {
     converted <- 2.54 * num
     return(round(converted, digits = 2))
   }
-  if (starting_unit == "centimeters" && final_unit == "inches") {
+  if (starting_unit == "cm" && final_unit == "in") {
     converted <- 0.393701 * num
     return(round(converted, digits = 2))
   }
-  stop("Sorry, our package doesn't support this distance unit right now. Try miles, kilometers, yards, meters, inches, or centimeters")
+  stop("Sorry, our package doesn't support this distance unit right now. Try mi, km, yrd, m, in, or cm")
 }
 
 #####################
@@ -71,33 +71,33 @@ weight <- function(num, starting_unit, final_unit) {
     num <- num[!is.na(num)]
   }
   # pounds & kilograms
-  if (starting_unit == "pounds" && final_unit == "kilograms") {
+  if (starting_unit == "lbs" && final_unit == "kg") {
     converted = num * 0.454
     return(round(converted, digits = 2))
   }
-  else if (starting_unit == "kilograms" && final_unit == "pounds") {
+  else if (starting_unit == "kg" && final_unit == "lbs") {
     converted = num * 2.205
     return(round(converted, digits = 2))
   }
   # catty & kilograms
-  else if (starting_unit == "catty" && final_unit == "kilograms") {
+  else if (starting_unit == "catty" && final_unit == "kg") {
     converted = num * 2
     return(round(converted, digits = 2))
   }
-  else if (starting_unit == "kilograms" && final_unit == "catty") {
+  else if (starting_unit == "kg" && final_unit == "catty") {
     converted = num / 2
     return(round(converted, digits = 2))
   }
   # tael & grams
-  else if (starting_unit == "tael" && final_unit == "grams") {
+  else if (starting_unit == "tael" && final_unit == "g") {
     converted = num / 50
     return(round(converted, digits = 2))
   }
-  else if (starting_unit == "grams" && final_unit == "tael") {
+  else if (starting_unit == "g" && final_unit == "tael") {
     converted = num * 50
     return(round(converted, digits = 2))
   } else {
-    stop("Sorry, our package doesn't support this weight unit right now.Try pounds, kilograms, catty, grams or tael")
+    stop("Sorry, our package doesn't support this weight unit right now.Try lbs, mg, catty, g or tael")
   }
 }
 
@@ -118,16 +118,16 @@ volume <- function(num, starting_unit, final_unit) {
     num <- num[!is.na(num)]
   }
 
-  if (starting_unit == "gallons" && final_unit == "liters") {
+  if (starting_unit == "gal" && final_unit == "l") {
     converted <- num * 3.78541
     return(round(converted, digits = 2))
   }
 
-  if (starting_unit == "liters" && final_unit == "gallons") {
+  if (starting_unit == "l" && final_unit == "gal") {
     converted <- num / 3.78541
     return(round(converted, digits = 2))
   } else {
-    stop("Sorry, our package doesn't support this volume unit right now. Try gallons or liters.")
+    stop("Sorry, our package doesn't support this volume unit right now. Try gal or l")
   }
 }
 
@@ -148,14 +148,14 @@ temp <- function(num, starting_unit, final_unit) {
     num <- num[!is.na(num)]
   }
 
-  if (starting_unit == "celsius" && final_unit == "fahrenheit") {
+  if (starting_unit == "c" && final_unit == "f") {
     converted <- (num * (9/5)) + 32
     return(round(converted, digits = 2))
-  } else if (starting_unit == "fahrenheit" && final_unit == "celsius") {
+  } else if (starting_unit == "f" && final_unit == "c") {
     converted <- (num - 32) * (5/9)
     return(round(converted, digits = 2))
   } else {
-    stop("Sorry, our package doesn't support this temperature unit right now. Try fahrenheit or celsius")
+    stop("Sorry, our package doesn't support this temperature unit right now. Try f or c")
   }
 }
 
