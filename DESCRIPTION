@@ -5,7 +5,7 @@ Authors@R:
     person("Molly", "Friedman", , "mtfriedman@smith.edu", role = c("aut", "cre"))
     person("Heng", "Song", , "hsong@smith.edu", role = c("aut", "cre"))
     person("Elinor", "Sterner", , "esterner@smith.edu", role = c("aut", "cre"))
-Description: An R package the converts metrics in Rstudio
+Description: An R package the converts metrics in Rstudio. For all supported units, the package treats the metric system as the base unit, and all conversions are to or from a metric unit.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

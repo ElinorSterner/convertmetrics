@@ -21,10 +21,6 @@ distance <- function(num, starting_unit, final_unit){
   # convert all inputs to lowercase
   starting_unit <- tolower(starting_unit)
   final_unit <- tolower(final_unit)
-  # check if the input is NULL
-  if (is.null(num)) {
-    stop("Input cannot be NULL.")
-  }
   # remove NA values
   if (anyNA(num)) {
     warning("Remove NA values")
@@ -64,10 +60,6 @@ weight <- function(num, starting_unit, final_unit) {
   # convert all inputs to lowercase
   starting_unit <- tolower(starting_unit)
   final_unit <- tolower(final_unit)
-  # check if the input is NULL
-  if (is.null(num)) {
-    stop("Input cannot be NULL.")
-  }
   # remove NA values
   if (anyNA(num)) {
     warning("Remove NA values")
@@ -111,10 +103,6 @@ volume <- function(num, starting_unit, final_unit) {
   # convert all inputs to lowercase
   starting_unit <- tolower(starting_unit)
   final_unit <- tolower(final_unit)
-  if (is.null(num)) {
-    stop("Input cannot be NULL.")
-  }
-
   # remove NA values
   if (anyNA(num)) {
     warning("Remove NA values")
@@ -142,9 +130,6 @@ temp <- function(num, starting_unit, final_unit) {
   # convert all inputs to lowercase
   starting_unit <- tolower(starting_unit)
   final_unit <- tolower(final_unit)
-  if (is.null(num)) {
-    stop("Input cannot be NULL.")
-  }
   # remove NA values
   if (anyNA(num)) {
     warning("Remove NA values")
