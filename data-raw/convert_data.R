@@ -17,7 +17,10 @@ convert_data <- data.frame(
   # Volume measurements of water samples (in liters)
   water_liters = rep(c(10, 20, 30, 40, 50), each = 12),
   water_gallons = rep(c(2.64172, 5.28344, 7.92516, 10.56688, 13.2086), each = 12),
-  water_cubic_meters = rep(c(0.01, 0.02, 0.03, 0.04, 0.05), each = 12)
+  water_cubic_meters = rep(c(0.01, 0.02, 0.03, 0.04, 0.05), each = 12),
+  # Temperature measurements  of water (in celsius and fahrenheit)
+  water_temp_f = rep(c(10, 15, 20, 25, 30), each = 12),
+  water_temp_c = rep(c(0, 5, 10, 15, 20), each = 12)
 )
 
 

@@ -14,8 +14,10 @@
 #'   \item{sediment_g}{Volume of sediment in the river in grams}
 #'   \item{sediment_tael}{Volume of sediment in the river in tael}
 #'   \item{water_liters}{Volume of water flowing in the river in liters}
-#'   \item{water_gallons}{Volume of sediment in the river in gallons}
-#'   \item{water_cubic_meters}{Volume of sediment in the river in cubic meters}
+#'   \item{water_gallons}{Volume of water in the river in gallons}
+#'   \item{water_cubic_meters}{Volume of water in the river in cubic meters}
+#'   \item{water_temp_f}{Temperature of water in the river in Fahrenheit}
+#'   \item{water_temp_c}{Temperature of water in the river in Celsius}
 #' }
 #' @source <https://xkcd.com/json.html>
 "convert_data"
