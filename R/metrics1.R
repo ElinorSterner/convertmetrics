@@ -97,7 +97,7 @@ weight <- function(num, starting_unit, final_unit) {
     converted = num * 50
     return(round(converted, digits = 2))
   } else {
-    stop("Sorry, our package doesn't support this weight unit right now.Try lbs, mg, catty, g or tael")
+    stop("Sorry, our package doesn't support this weight unit right now.Try lbs, kg, catty, g or tael")
   }
 }
 

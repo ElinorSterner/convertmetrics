@@ -20,14 +20,15 @@ conversions are to or from a metric unit.
 
 Overall, this package supports the following units and pairs of units:
 
-- volumes (liters and gallons)
+- volumes (liters and gallons, abbreviated as l and gal)
 
 - distances (miles and kilometers, meters and yards, inches and
-  centimeters)
+  centimeters, abbreviated as mi, kg, m, yrd, in, and cm)
 
-- temperatures (Fahrenheit and Celsius)
+- temperatures (Fahrenheit and Celsius, abbreviated as f and c)
 
 - weights (pounds and kilograms, kilograms and catty, kilograms and
+  tael, abbreviated as lbs and kg - use the whole name for catty and
   tael)
 
 ## Installation
@@ -40,19 +41,6 @@ You can install the development version of convertmetrics from
 devtools::install_github("ElinorSterner/convertmetrics")
 ```
 
-And install the final version of the package from CRAN with:
-
-``` r
-install.packages("convertmetrics")
-#> Installing package into '/private/var/folders/pj/_h64zn_j63n7jhztw7cmngnm0000gn/T/RtmpcAFGYQ/temp_libpath163e23ecf35bf'
-#> (as 'lib' is unspecified)
-#> Warning: package 'convertmetrics' is not available for this version of R
-#> 
-#> A version of this package for your version of R might be available elsewhere,
-#> see the ideas at
-#> https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
-```
-
 ## Usage
 
 This is a basic example which shows you how to solve a common problem:
@@ -60,18 +48,18 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(convertmetrics)
 
-volume(c(4, 7, 22), "gallons", "liters")
+volume(c(4, 7, 22), "gal", "l")
 #> [1] 15.14 26.50 83.28
 
-weight(c(78, 34, 99), "grams", "tael")
+weight(c(78, 34, 99), "g", "tael")
 #> [1] 3900 1700 4950
 
-weight(c(78, 34, 99), "pounds", "kilograms")
+weight(c(78, 34, 99), "lbs", "kg")
 #> [1] 35.41 15.44 44.95
 
-distance(c(26.2, 13.1, 89, 7, 3), "miles", "kilometers")
+distance(c(26.2, 13.1, 89, 7, 3), "mi", "km")
 #> [1]  42.16  21.08 143.23  11.27   4.83
 
-temp(c(63, 62, 70, 65, 64), "fahrenheit", "celsius")
+temp(c(63, 62, 70, 65, 64), "f", "c")
 #> [1] 17.22 16.67 21.11 18.33 17.78
 ```

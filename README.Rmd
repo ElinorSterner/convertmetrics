@@ -27,13 +27,13 @@ The goal of convertmetrics is to convert between measurement systems. It works w
 
 Overall, this package supports the following units and pairs of units:
 
--   volumes (liters and gallons)
+-   volumes (liters and gallons, abbreviated as l and gal)
 
--   distances (miles and kilometers, meters and yards, inches and centimeters)
+-   distances (miles and kilometers, meters and yards, inches and centimeters, abbreviated as mi, kg, m, yrd, in, and cm)
 
--   temperatures (Fahrenheit and Celsius)
+-   temperatures (Fahrenheit and Celsius, abbreviated as f and c)
 
--   weights (pounds and kilograms, kilograms and catty, kilograms and tael)
+-   weights (pounds and kilograms, kilograms and catty, kilograms and tael, abbreviated as lbs and kg - use the whole name for catty and tael)
 
 ## Installation
 
@@ -44,11 +44,6 @@ You can install the development version of convertmetrics from [GitHub](https://
 devtools::install_github("ElinorSterner/convertmetrics")
 ```
 
-And install the final version of the package from CRAN with:
-
-```{r}
-install.packages("convertmetrics")
-```
 
 ## Usage
 
@@ -57,14 +52,14 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(convertmetrics)
 
-volume(c(4, 7, 22), "gallons", "liters")
+volume(c(4, 7, 22), "gal", "l")
 
-weight(c(78, 34, 99), "grams", "tael")
+weight(c(78, 34, 99), "g", "tael")
 
-weight(c(78, 34, 99), "pounds", "kilograms")
+weight(c(78, 34, 99), "lbs", "kg")
 
-distance(c(26.2, 13.1, 89, 7, 3), "miles", "kilometers")
+distance(c(26.2, 13.1, 89, 7, 3), "mi", "km")
 
-temp(c(63, 62, 70, 65, 64), "fahrenheit", "celsius")
+temp(c(63, 62, 70, 65, 64), "f", "c")
 
 ```
