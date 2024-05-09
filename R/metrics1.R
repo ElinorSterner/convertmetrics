@@ -1,7 +1,7 @@
 #' @name convertmetrics
 #' @title Metrics Conversion
 #' @description
-#' This function converts metrics between different units
+#' This function converts metrics between different units. All NA values from the inputs will be discarded.
 #'
 #' @importFrom dplyr glimpse
 #'
