@@ -36,7 +36,7 @@ weight(num = c(3, NA, 5), starting_unit = "g", final_unit = "tael")
 
 The `convertmetrics` package also comes with a built-in data set describing 60 conversions. Some of the data points are repetitive, with the purpose of showing that this package can work with a large data frame.
 ```{r}
-head(convertmetrics::convert_data)
+dplyr::glimpse(convertmetrics::convert_data)
 ```
 Suppose that we also want to convert the first column (in `km`) to `mi`, so we will set the `num` argument equal to the first column of the convert_data dataset, `starting_unit` equals to `km`, and `final_unit` equals to `mi`.
 ```{r}
