@@ -11,12 +11,12 @@
 
 ## Overview
 
-The goal of convertmetrics is to convert between measurement systems. It
-works will multiple systems of measurement, including the metric system,
-imperial system (i.e. US and UK measurements) and some weights used in
-the Chinese measurement system, catty and tael. For all supported units,
-the package converts treats the metric system as the base unit, and all
-conversions are to or from a metric unit.
+The goal of `convertmetrics` package is to convert between measurement
+systems. It works will multiple systems of measurement, including the
+metric system, imperial system (i.e. US and UK measurements) and some
+weights used in the Chinese measurement system, catty and tael. For all
+supported units, the package converts treats the metric system as the
+base unit, and all conversions are to or from a metric unit.
 
 Overall, this package supports the following units and pairs of units:
 
