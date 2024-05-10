@@ -19,7 +19,7 @@ temp(num, starting_unit, final_unit)
 \arguments{
 \item{num}{A number or a vector for converting.}
 
-\item{starting_unit}{The starting_unit unit of our number.}
+\item{starting_unit}{The starting unit of our number.}
 
 \item{final_unit}{The unit we want to convert to.}
 }

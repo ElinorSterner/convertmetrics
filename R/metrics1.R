@@ -6,7 +6,7 @@
 #' @importFrom dplyr glimpse
 #'
 #' @param num A number or a vector for converting.
-#' @param starting_unit The starting_unit unit of our number.
+#' @param starting_unit The starting unit of our number.
 #' @param final_unit The unit we want to convert to.
 #' @return The converted number or vector.
 #' @examples
@@ -92,7 +92,7 @@ weight <- function(num, starting_unit, final_unit) {
     converted = num * 50
     return(round(converted, digits = 2))
   } else {
-    stop("Sorry, our package doesn't support this weight unit right now.Try lbs, kg, catty, g or tael")
+    stop("Sorry, our package doesn't support this weight unit right now.Try lbs, kg, catty, g, or tael")
   }
 }
 
