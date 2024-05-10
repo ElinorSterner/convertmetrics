@@ -29,7 +29,7 @@ Overall, this package supports the following units and pairs of units:
 
 -   volumes (liters and gallons, abbreviated as l and gal)
 
--   distances (miles and kilometers, meters and yards, inches and centimeters, abbreviated as mi, kg, m, yrd, in, and cm)
+-   distances (miles and kilometers, meters and yards, inches and centimeters, abbreviated as mi, km, m, yrd, in, and cm)
 
 -   temperatures (Fahrenheit and Celsius, abbreviated as f and c)
 
