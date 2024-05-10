@@ -22,12 +22,12 @@ Let's see how we can accomplish this. First, load the `convertmetrics` package.
 library(convertmetrics)
 ```
 
-Then, use the `distance()`, `weight()`, `volume()`, or `temp()` functions to convert a number with a specific unit to the other. We will take a look at the conversion between `g` and `tael` in weight. Assuming that we want to convert `8 gal` to `l`, so we will set the `num` argument equal to 8, `starting_unit` equals to `gal`, and `final_unit` equals to `l`.
+Then, use the `distance()`, `weight()`, `volume()`, or `temp()` functions to convert a number with a specific unit to the other. We will take a look at the conversion between `gal` and `l` in volume. Assuming that we want to convert 8 `gal` to `l`, so we will set the `num` argument equal to 8, `starting_unit` equals to `gal`, and `final_unit` equals to `l`.
 
 ```{r}
 volume(num = 8, starting_unit = "gal", final_unit = "l")
 ```
-Suppose that we also want to convert `c(3, NA, 5) g` to `taels`, so we will set the `num` argument equal to `c(3, NA, 5)`, `starting_unit` equals to `g`, and `final_unit` equals to `tael`. The function will discard the NA values.
+Suppose that we also want to convert c(3, NA, 5) `g` to `taels`, so we will set the `num` argument equal to c(3, NA, 5), `starting_unit` equals to `g`, and `final_unit` equals to `tael`. The function will provide a warning message and discard the NA values.
 ```{r}
 weight(num = c(3, NA, 5), starting_unit = "g", final_unit = "tael")
 ```
